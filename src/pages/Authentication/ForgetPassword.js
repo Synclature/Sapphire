@@ -42,7 +42,7 @@ const ForgetPasswordPage = props => {
     forgetSuccessMsg: state.ForgetPassword.forgetSuccessMsg,
   }));
 
-document.title="Reset Password | Project Sapphire";
+document.title="Reset Password | Sapphire";
 
   return (
     <ParticlesAuth>

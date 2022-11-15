@@ -101,7 +101,7 @@ const Login = (props) => {
         }, 3000);
     }, [dispatch, error]);
 
-    document.title = "Basic SignIn | Project Sapphire";
+    document.title = "Basic SignIn | Sapphire";
     return (
         <React.Fragment>
             <ParticlesAuth>
@@ -125,7 +125,7 @@ const Login = (props) => {
                                     <CardBody className="p-4">
                                         <div className="text-center mt-2">
                                             <h5 className="text-primary">Welcome Back !</h5>
-                                            <p className="text-muted">Sign in to continue to Project Sapphire.</p>
+                                            <p className="text-muted">Sign in to continue to Sapphire.</p>
                                         </div>
                                         {error && error ? (<Alert color="danger"> {error} </Alert>) : null}
                                         <div className="p-2 mt-4">

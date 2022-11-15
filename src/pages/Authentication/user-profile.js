@@ -78,7 +78,7 @@ const UserProfile = () => {
     }
   });
 
-  document.title = "Profile | Project Sapphire";
+  document.title = "Profile | Sapphire";
   return (
     <React.Fragment>
       <div className="page-content">

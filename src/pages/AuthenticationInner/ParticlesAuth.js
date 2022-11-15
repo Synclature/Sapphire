@@ -24,7 +24,7 @@ const ParticlesAuth = ({ children }) => {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="text-center">
-                                    <p className="mb-0 text-muted">&copy; {new Date().getFullYear()} Project Sapphire. Crafted with <i className="mdi mdi-heart text-danger"></i> by Synclature</p>
+                                    <p className="mb-0 text-muted">&copy; {new Date().getFullYear()} Sapphire. Crafted with <i className="mdi mdi-heart text-danger"></i> by Synclature</p>
                                 </div>
                             </div>
                         </div>

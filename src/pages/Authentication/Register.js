@@ -72,7 +72,7 @@ const Register = () => {
 
     }, [dispatch, success, error, history]);
 
-    document.title = "Basic SignUp | Project Sapphire";
+    document.title = "Basic SignUp | Sapphire";
 
     return (
         <React.Fragment>
