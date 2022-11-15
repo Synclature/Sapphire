@@ -23,6 +23,7 @@ function* loginUser({ payload: { user, history } }) {
         user.password
       );
       yield put(loginSuccess(response));
+        history.push("/dashboard");
     } else if (process.env.REACT_APP_DEFAULTAUTH === "jwt") {
       const response = yield call(postJwtLogin, {
         email: user.email,

@@ -20,7 +20,7 @@ import { loginUser, socialLogin, resetLoginFlag } from "../../store/actions";
 
 import logoLight from "../../assets/images/logo.svg";
 //Import config
-// import { facebook, google } from "../../config";
+import { facebook, google } from "../../config";
 //import images
 
 const Login = (props) => {
@@ -45,8 +45,8 @@ const Login = (props) => {
         enableReinitialize: true,
 
         initialValues: {
-            email: userLogin.email || '',
-            password: userLogin.password || "123456" || '',
+            email: userLogin.email ||  '',
+            password: userLogin.password || '',
         },
         validationSchema: Yup.object({
             email: Yup.string().required("Please Enter Your Email"),
@@ -82,18 +82,18 @@ const Login = (props) => {
         }
     };
 
-    //handleGoogleLoginResponse
-    // const googleResponse = response => {
-    //     signIn(response, "google");
-    // };
+    // handleGoogleLoginResponse
+    const googleResponse = response => {
+        signIn(response, "google");
+    };
 
-    //handleTwitterLoginResponse
-    // const twitterResponse = e => {}
+    // handleTwitterLoginResponse
+    const twitterResponse = e => {}
 
-    //handleFacebookLoginResponse
-    // const facebookResponse = response => {
-    //     signIn(response, "facebook");
-    // };
+    // handleFacebookLoginResponse
+    const facebookResponse = response => {
+        signIn(response, "facebook");
+    };
 
     useEffect(() => {
         setTimeout(() => {
