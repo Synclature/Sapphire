@@ -242,19 +242,13 @@ const B = () => {
                             name: "Assignee",
                             formatter: (cell) =>
                               _(
-                                <span className="badge bg-primary">
-                                  {cell}
-                                </span>
+                                <span className="badge bg-primary">{cell}</span>
                               ),
                           },
                           {
                             name: "Reviewer",
                             formatter: (cell) =>
-                              _(
-                                <span className="badge bg-info">
-                                  {cell}
-                                </span>
-                              ),
+                              _(<span className="badge bg-info">{cell}</span>),
                           },
                           "Status",
                         ]}
@@ -263,11 +257,151 @@ const B = () => {
                         pagination={{ enabled: true, limit: 20 }}
                       />
                     </TabPane>
-                    <TabPane tabId="2" id="arrow-profile"></TabPane>
-                    <TabPane tabId="3" id="arrow-contact"></TabPane>
-                    <TabPane tabId="4" id="arrow-contact"></TabPane>
-                    <TabPane tabId="5" id="arrow-contact"></TabPane>
-                    <TabPane tabId="6" id="arrow-contact"></TabPane>
+                    <TabPane tabId="2" id="arrow-profile">
+                      <Grid
+                        data={policiesTableData}
+                        columns={[
+                          {
+                            name: "Policy Name",
+                            formatter: (cell) =>
+                              _(<span className="fw-semibold">{cell}</span>),
+                          },
+                          "Category",
+                          {
+                            name: "Assignee",
+                            formatter: (cell) =>
+                              _(
+                                <span className="badge bg-primary">{cell}</span>
+                              ),
+                          },
+                          {
+                            name: "Reviewer",
+                            formatter: (cell) =>
+                              _(<span className="badge bg-info">{cell}</span>),
+                          },
+                          "Status",
+                        ]}
+                        search={true}
+                        sort={true}
+                        pagination={{ enabled: true, limit: 20 }}
+                      />
+                    </TabPane>
+                    <TabPane tabId="3" id="arrow-contact">
+                      <Grid
+                        data={policiesTableData}
+                        columns={[
+                          {
+                            name: "Policy Name",
+                            formatter: (cell) =>
+                              _(<span className="fw-semibold">{cell}</span>),
+                          },
+                          "Category",
+                          {
+                            name: "Assignee",
+                            formatter: (cell) =>
+                              _(
+                                <span className="badge bg-primary">{cell}</span>
+                              ),
+                          },
+                          {
+                            name: "Reviewer",
+                            formatter: (cell) =>
+                              _(<span className="badge bg-info">{cell}</span>),
+                          },
+                          "Status",
+                        ]}
+                        search={true}
+                        sort={true}
+                        pagination={{ enabled: true, limit: 20 }}
+                      />
+                    </TabPane>
+                    <TabPane tabId="4" id="arrow-contact">
+                      <Grid
+                        data={policiesTableData}
+                        columns={[
+                          {
+                            name: "Policy Name",
+                            formatter: (cell) =>
+                              _(<span className="fw-semibold">{cell}</span>),
+                          },
+                          "Category",
+                          {
+                            name: "Assignee",
+                            formatter: (cell) =>
+                              _(
+                                <span className="badge bg-primary">{cell}</span>
+                              ),
+                          },
+                          {
+                            name: "Reviewer",
+                            formatter: (cell) =>
+                              _(<span className="badge bg-info">{cell}</span>),
+                          },
+                          "Status",
+                        ]}
+                        search={true}
+                        sort={true}
+                        pagination={{ enabled: true, limit: 20 }}
+                      />
+                    </TabPane>
+                    <TabPane tabId="5" id="arrow-contact">
+                      <Grid
+                        data={policiesTableData}
+                        columns={[
+                          {
+                            name: "Policy Name",
+                            formatter: (cell) =>
+                              _(<span className="fw-semibold">{cell}</span>),
+                          },
+                          "Category",
+                          {
+                            name: "Assignee",
+                            formatter: (cell) =>
+                              _(
+                                <span className="badge bg-primary">{cell}</span>
+                              ),
+                          },
+                          {
+                            name: "Reviewer",
+                            formatter: (cell) =>
+                              _(<span className="badge bg-info">{cell}</span>),
+                          },
+                          "Status",
+                        ]}
+                        search={true}
+                        sort={true}
+                        pagination={{ enabled: true, limit: 20 }}
+                      />
+                    </TabPane>
+                    <TabPane tabId="6" id="arrow-contact">
+                      <Grid
+                        data={policiesTableData}
+                        columns={[
+                          {
+                            name: "Policy Name",
+                            formatter: (cell) =>
+                              _(<span className="fw-semibold">{cell}</span>),
+                          },
+                          "Category",
+                          {
+                            name: "Assignee",
+                            formatter: (cell) =>
+                              _(
+                                <span className="badge bg-primary">{cell}</span>
+                              ),
+                          },
+                          {
+                            name: "Reviewer",
+                            formatter: (cell) =>
+                              _(<span className="badge bg-info">{cell}</span>),
+                          },
+                          "Status",
+                        ]}
+                        search={true}
+                        sort={true}
+                        pagination={{ enabled: true, limit: 20 }}
+                      />
+                    </TabPane>
                   </TabContent>
                 </CardBody>
               </Card>
