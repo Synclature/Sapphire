@@ -11,10 +11,13 @@ import A from "../pages/A"
 import B from "../pages/B"
 
 // SOA
-import SOA from "../pages/SOA"
+import SOA1 from "../pages/SOA"
 
 // D
 import D from "../pages/D"
+
+// Statement Of Applicability
+import  SOA from "../pages/Audits/SOA"
 
 
 //login
@@ -36,10 +39,14 @@ const authProtectedRoutes = [
   { path: "/b", component: B },
 
   // SOA
-  { path: "/soa", component: SOA },
+  { path: "/soa", component: SOA1 },
 
   // D
   { path: "/d", component: D },
+  
+  //Statement Of Applicability
+  { path: "/audits/statement-of-applicability", component: SOA },
+  
 
   // this route should be at the end of all other routes
   // eslint-disable-next-line react/display-name

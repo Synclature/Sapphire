@@ -15,11 +15,12 @@ const Navdata = () => {
     const [isBaseUi, setIsBaseUi] = useState(false);
     const [isAdvanceUi, setIsAdvanceUi] = useState(false);
     const [isForms, setIsForms] = useState(false);
-    const [isTables, setIsTables] = useState(false);
-    const [isCharts, setIsCharts] = useState(false);
-    const [isIcons, setIsIcons] = useState(false);
-    const [isMaps, setIsMaps] = useState(false);
-    const [isMultiLevel, setIsMultiLevel] = useState(false);
+    const [isAudits, setIsAudits] = useState(false);
+    const [isRisk, setIsRisk] = useState(false);
+    const [isInfoSecProgram, setIsInfoSecProgram] = useState(false);
+    const [isIntegration, setIsIntegration] = useState(false);
+    const [isPeople, setIsPeople] = useState(false);
+    const [isAssuranceTools, setIsAssuranceTools] = useState(false);
 
     const [iscurrentState, setIscurrentState] = useState('Dashboard');
 
@@ -63,6 +64,30 @@ const Navdata = () => {
         if (iscurrentState !== 'Settings') {
             setIsForms(false);
         }
+        if (iscurrentState !== 'Audits') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'Risk') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'InfoSec Program') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'Integrations') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'People') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'Questionnaire') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'Vendors') {
+            setIsForms(false);
+        }
+        if (iscurrentState !== 'Assurance Tools') {
+            setIsForms(false);
+        }
     }, [
         history,
         iscurrentState,
@@ -73,11 +98,6 @@ const Navdata = () => {
         isBaseUi,
         isAdvanceUi,
         isForms,
-        isTables,
-        isCharts,
-        isIcons,
-        isMaps,
-        isMultiLevel
     ]);
 
     const menuItems = [
@@ -221,6 +241,212 @@ const Navdata = () => {
                 setIscurrentState('Landing');
                 updateIconSidebar(e);
             }
+        },
+         {
+            id: "Audits",
+            label: "Audits",
+            icon: <FeatherIcon icon="grid" className="icon-dual" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsAudits(!isAudits);
+                setIscurrentState('Audits');
+                updateIconSidebar(e);
+            },
+            stateVariables: isAudits,
+            subItems: [
+                {
+                    id: "audit-readiness-projects",
+                    label: "Audits Readiness Projects",
+                    link: "/audits/audits-readiness-projects",
+                    parentId: "Audits",
+                },
+                {
+                    id: "statement-of-applicability",
+                    label: "Statement of Applicability",
+                    link: "/audits/statement-of-applicability",
+                    parentId: "Audits",
+                },
+                {
+                    id: "audits-projects",
+                    label: "Audit Projects",
+                    link: "/audits/audit-projects",
+                    parentId: "Audits",
+                },
+                {
+                    id: "training-deck",
+                    label: "Audit Findings",
+                    link: "/security-compliance/taining-deck",
+                    parentId: "Audits",
+                }
+            ],
+        },
+        {
+            id: "Risk",
+            label: "Risk",
+            icon: <FeatherIcon icon="grid" className="icon-dual" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsRisk(!isRisk);
+                setIscurrentState('Risk');
+                updateIconSidebar(e);
+            },
+            stateVariables: isRisk,
+            subItems: [
+                {
+                    id: "policy-deck",
+                    label: "Risk Dashboard",
+                    link: "#",
+                    parentId: "Risk",
+                },
+                {
+                    id: "controls-deck",
+                    label: "Risk Identification Survey",
+                    link: "/#",
+                    parentId: "Risk",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Risk Register",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "Risk",
+                }
+            ],
+        },{
+            id: "InfoSecProgram",
+            label: "InfoSec Program",
+            icon: <FeatherIcon icon="grid" className="icon-dual" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsInfoSecProgram(!isInfoSecProgram);
+                setIscurrentState('InfoSecProgram');
+                updateIconSidebar(e);
+            },
+            stateVariables: isInfoSecProgram,
+            subItems: [
+                {
+                    id: "policy-deck",
+                    label: "Products",
+                    link: "#",
+                    parentId: "InfoSecProgram",
+                },
+                {
+                    id: "controls-deck",
+                    label: "Policies",
+                    link: "/#",
+                    parentId: "InfoSecProgram",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Procedures",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "InfoSecProgram",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Controls",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "InfoSecProgram",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Evidence Tasks",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "InfoSecProgram",
+                }
+            ],
+        },{
+            id: "People",
+            label: "People",
+            icon: <FeatherIcon icon="grid" className="icon-dual" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsPeople(!isPeople);
+                setIscurrentState('People');
+                updateIconSidebar(e);
+            },
+            stateVariables: isPeople,
+            subItems: [
+                {
+                    id: "policy-deck",
+                    label: "Users",
+                    link: "#",
+                    parentId: "People",
+                },
+                {
+                    id: "controls-deck",
+                    label: "Roles",
+                    link: "/#",
+                    parentId: "People",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Policy Training",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "People",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Onboarding and Offboarding",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "People",
+                },
+                {
+                    id: "certifications-deck",
+                    label: "Authentication Setup",
+                    link: "/security-compliance/certifications-deck",
+                    parentId: "People",
+                }
+            ],
+        },{
+            id: "Questionnaires",
+            label: "Manage",
+            icon: <i className="ri-rocket-line" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIscurrentState('Questionnaires');
+                updateIconSidebar(e);
+            }
+        },{
+            id: "Vendors",
+            label: "Manage",
+            icon: <i className="ri-rocket-line" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIscurrentState('Vendors');
+                updateIconSidebar(e);
+            }
+        },{
+            id: "AssuranceTools",
+            label: "Assurance Tools",
+            icon: <FeatherIcon icon="grid" className="icon-dual" />,
+            link: "/#",
+            click: function (e) {
+                e.preventDefault();
+                setIsAssuranceTools(!isAssuranceTools);
+                setIscurrentState('AssuranceTools');
+                updateIconSidebar(e);
+            },
+            stateVariables: isAssuranceTools,
+            subItems: [
+                {
+                    id: "policy-deck",
+                    label: "Portal",
+                    link: "#",
+                    parentId: "AssuranceTools",
+                },
+                {
+                    id: "controls-deck",
+                    label: "Security Assurance Report",
+                    link: "/#",
+                    parentId: "AssuranceTools",
+                },
+            ],
         }
     ];
     return <React.Fragment>{menuItems}</React.Fragment>;
