@@ -133,12 +133,6 @@ const Navdata = () => {
                     parentId: "SamplePages",
                 },
                 {
-                    id: "b",
-                    label: "B",
-                    link: "/b",
-                    parentId: "SamplePages",
-                },
-                {
                     id: "c",
                     label: "SOA",
                     link: "/soa",

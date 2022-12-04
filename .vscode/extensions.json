@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "PKief.material-icon-theme",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "eg2.vscode-npm-script",
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+        "streetsidesoftware.code-spell-checker",
+        "stylelint.vscode-stylelint",
+        "planbcoding.vscode-react-refactor"
+    ]
+}

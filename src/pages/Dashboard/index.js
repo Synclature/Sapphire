@@ -126,7 +126,7 @@ const Dashboard = () => {
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
-          <BreadCrumb title="Dashboard" pageTitle="Dashboards" />
+          <BreadCrumb title="Dashboard" />
           <Row className="row-cols-1" gap="2" md="2" lg="3">
             <Col>
               <Stats
