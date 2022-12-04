@@ -18,7 +18,6 @@ const Navdata = () => {
     const [isAudits, setIsAudits] = useState(false);
     const [isRisk, setIsRisk] = useState(false);
     const [isInfoSecProgram, setIsInfoSecProgram] = useState(false);
-    const [isIntegration, setIsIntegration] = useState(false);
     const [isPeople, setIsPeople] = useState(false);
     const [isAssuranceTools, setIsAssuranceTools] = useState(false);
 
@@ -235,11 +234,9 @@ const Navdata = () => {
             id: "manage",
             label: "Manage",
             icon: <i className="ri-rocket-line" />,
-            link: "/#",
+            link: "/manage",
             click: function (e) {
                 e.preventDefault();
-                setIscurrentState('Landing');
-                updateIconSidebar(e);
             }
         },
          {
@@ -276,7 +273,7 @@ const Navdata = () => {
                 {
                     id: "training-deck",
                     label: "Audit Findings",
-                    link: "/security-compliance/taining-deck",
+                    link: "/audits/audit-findings",
                     parentId: "Audits",
                 }
             ],
@@ -295,21 +292,21 @@ const Navdata = () => {
             stateVariables: isRisk,
             subItems: [
                 {
-                    id: "policy-deck",
+                    id: "risk-dashboard",
                     label: "Risk Dashboard",
-                    link: "#",
+                    link: "/risk/risk-dashboard",
                     parentId: "Risk",
                 },
                 {
-                    id: "controls-deck",
+                    id: "risk-identification-survey",
                     label: "Risk Identification Survey",
-                    link: "/#",
+                    link: "/risk/risk-identification-survey",
                     parentId: "Risk",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "risk-register",
                     label: "Risk Register",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/risk/risk-register",
                     parentId: "Risk",
                 }
             ],
@@ -327,33 +324,33 @@ const Navdata = () => {
             stateVariables: isInfoSecProgram,
             subItems: [
                 {
-                    id: "policy-deck",
+                    id: "products",
                     label: "Products",
-                    link: "#",
+                    link: "/infosec-program/products",
                     parentId: "InfoSecProgram",
                 },
                 {
-                    id: "controls-deck",
+                    id: "policies",
                     label: "Policies",
-                    link: "/#",
+                    link: "/infosec-program/policies",
                     parentId: "InfoSecProgram",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "procedures",
                     label: "Procedures",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/infosec-program/procedures",
                     parentId: "InfoSecProgram",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "controls",
                     label: "Controls",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/infosec-program/controls",
                     parentId: "InfoSecProgram",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "evidence-tasks",
                     label: "Evidence Tasks",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/infosec-program/evidence-task",
                     parentId: "InfoSecProgram",
                 }
             ],
@@ -373,49 +370,49 @@ const Navdata = () => {
                 {
                     id: "policy-deck",
                     label: "Users",
-                    link: "#",
+                    link: "/people/policy-deck",
                     parentId: "People",
                 },
                 {
                     id: "controls-deck",
                     label: "Roles",
-                    link: "/#",
+                    link: "/people/roles",
                     parentId: "People",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "policy-training",
                     label: "Policy Training",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/people/policy-training",
                     parentId: "People",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "onboarding-offboarding",
                     label: "Onboarding and Offboarding",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/people/onboarding-offboarding",
                     parentId: "People",
                 },
                 {
-                    id: "certifications-deck",
+                    id: "authentication-setup",
                     label: "Authentication Setup",
-                    link: "/security-compliance/certifications-deck",
+                    link: "/people/authentication-setup",
                     parentId: "People",
                 }
             ],
         },{
-            id: "Questionnaires",
-            label: "Manage",
+            id: "questionnaires",
+            label: "Questionnaires",
             icon: <i className="ri-rocket-line" />,
-            link: "/#",
+            link: "/questionnaires",
             click: function (e) {
                 e.preventDefault();
-                setIscurrentState('Questionnaires');
+                setIscurrentState('questionnaires');
                 updateIconSidebar(e);
             }
         },{
             id: "Vendors",
-            label: "Manage",
+            label: "Vendots",
             icon: <i className="ri-rocket-line" />,
-            link: "/#",
+            link: "/vendors",
             click: function (e) {
                 e.preventDefault();
                 setIscurrentState('Vendors');
@@ -435,15 +432,15 @@ const Navdata = () => {
             stateVariables: isAssuranceTools,
             subItems: [
                 {
-                    id: "policy-deck",
+                    id: "portal",
                     label: "Portal",
-                    link: "#",
+                    link: "/assurance-tools/portal",
                     parentId: "AssuranceTools",
                 },
                 {
-                    id: "controls-deck",
+                    id: "security-assurance-report",
                     label: "Security Assurance Report",
-                    link: "/#",
+                    link: "/assurance-tools/security-assurance-report",
                     parentId: "AssuranceTools",
                 },
             ],

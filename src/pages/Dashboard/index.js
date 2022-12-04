@@ -3,6 +3,8 @@ import { Container, Row, Col } from "reactstrap";
 import BreadCrumb from "../../Components/Common/BreadCrumb";
 import Stats from "../../Components/widgets/stats";
 import MyTasks from "../../Components/widgets/taskList";
+import { tasks } from "../../common/data";
+
 
 // Data
 const statsData = [
@@ -118,7 +120,7 @@ const statsData = [
   },
 ];
 
-const DashboardEcommerce = () => {
+const Dashboard = () => {
   document.title = "Dashboard";
   return (
     <React.Fragment>
@@ -170,7 +172,12 @@ const DashboardEcommerce = () => {
             </Col>
           </Row>
           <Row lg="2">
-            <MyTasks />
+            <Col>
+            <MyTasks title="Assigned to Me" tasks={tasks}/>
+            </Col>
+            <Col>
+            <MyTasks title="Unread Mentions" tasks={tasks}/>
+            </Col>
           </Row>
         </Container>
       </div>
@@ -178,4 +185,4 @@ const DashboardEcommerce = () => {
   );
 };
 
-export default DashboardEcommerce;
+export default Dashboard;
