@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 //Import Icons
-import FeatherIcon from "feather-icons-react";
+import FeatherIcon from 'feather-icons-react';
 
 const Navdata = () => {
     const history = useHistory();
@@ -24,15 +24,15 @@ const Navdata = () => {
     const [iscurrentState, setIscurrentState] = useState('Dashboard');
 
     function updateIconSidebar(e) {
-        if (e && e.target && e.target.getAttribute("subitems")) {
-            const ul = document.getElementById("two-column-menu");
-            const iconItems = ul.querySelectorAll(".nav-icon.active");
+        if (e && e.target && e.target.getAttribute('subitems')) {
+            const ul = document.getElementById('two-column-menu');
+            const iconItems = ul.querySelectorAll('.nav-icon.active');
             let activeIconItems = [...iconItems];
-            activeIconItems.forEach((item) => {
-                item.classList.remove("active");
-                var id = item.getAttribute("subitems");
+            activeIconItems.forEach(item => {
+                item.classList.remove('active');
+                var id = item.getAttribute('subitems');
                 if (document.getElementById(id))
-                    document.getElementById(id).classList.remove("show");
+                    document.getElementById(id).classList.remove('show');
             });
         }
     }
@@ -101,10 +101,10 @@ const Navdata = () => {
 
     const menuItems = [
         {
-            id: "dashboard",
-            label: "Dashboards",
+            id: 'dashboard',
+            label: 'Dashboards',
             icon: <FeatherIcon icon="home" className="icon-dual" />,
-            link: "/dashboard",
+            link: '/dashboard',
             click: function (e) {
                 e.preventDefault();
                 setIsSecurityCompliance(!isDashboard);
@@ -114,10 +114,10 @@ const Navdata = () => {
             stateVariables: isDashboard,
         },
         {
-            id: "SamplePages",
-            label: "Sample Pages",
+            id: 'SamplePages',
+            label: 'Sample Pages',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsSamplePages(!isSamplePages);
@@ -127,36 +127,36 @@ const Navdata = () => {
             stateVariables: isSamplePages,
             subItems: [
                 {
-                    id: "a",
-                    label: "A",
-                    link: "/a",
-                    parentId: "SamplePages",
+                    id: 'a',
+                    label: 'A',
+                    link: '/a',
+                    parentId: 'SamplePages',
                 },
                 {
-                    id: "c",
-                    label: "SOA",
-                    link: "/soa",
-                    parentId: "SamplePages",
+                    id: 'c',
+                    label: 'SOA',
+                    link: '/soa',
+                    parentId: 'SamplePages',
                 },
                 {
-                    id: "d",
-                    label: "D",
-                    link: "/d",
-                    parentId: "SamplePages",
+                    id: 'd',
+                    label: 'D',
+                    link: '/d',
+                    parentId: 'SamplePages',
                 },
                 {
-                    id: "e",
-                    label: "E",
-                    link: "/e",
-                    parentId: "SamplePages",
-                }
+                    id: 'e',
+                    label: 'E',
+                    link: '/e',
+                    parentId: 'SamplePages',
+                },
             ],
         },
         {
-            id: "SecurityCompliance",
-            label: "Security & Compliance",
+            id: 'SecurityCompliance',
+            label: 'Security & Compliance',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsSecurityCompliance(!isSecurityCompliance);
@@ -166,36 +166,36 @@ const Navdata = () => {
             stateVariables: isSecurityCompliance,
             subItems: [
                 {
-                    id: "policy-deck",
-                    label: "Policy Deck",
-                    link: "/security-compliance/policy-deck",
-                    parentId: "SecurityCompliance",
+                    id: 'policy-deck',
+                    label: 'Policy Deck',
+                    link: '/security-compliance/policy-deck',
+                    parentId: 'SecurityCompliance',
                 },
                 {
-                    id: "controls-deck",
-                    label: "Controls Deck",
-                    link: "/security-compliance/controls-deck",
-                    parentId: "SecurityCompliance",
+                    id: 'controls-deck',
+                    label: 'Controls Deck',
+                    link: '/security-compliance/controls-deck',
+                    parentId: 'SecurityCompliance',
                 },
                 {
-                    id: "certifications-deck",
-                    label: "Certifications Deck",
-                    link: "/security-compliance/certifications-deck",
-                    parentId: "SecurityCompliance",
+                    id: 'certifications-deck',
+                    label: 'Certifications Deck',
+                    link: '/security-compliance/certifications-deck',
+                    parentId: 'SecurityCompliance',
                 },
                 {
-                    id: "training-deck",
-                    label: "Traning Deck",
-                    link: "/security-compliance/taining-deck",
-                    parentId: "SecurityCompliance",
-                }
+                    id: 'training-deck',
+                    label: 'Traning Deck',
+                    link: '/security-compliance/taining-deck',
+                    parentId: 'SecurityCompliance',
+                },
             ],
         },
         {
-            id: "Projects",
-            label: "Projects",
+            id: 'Projects',
+            label: 'Projects',
             icon: <FeatherIcon icon="users" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsAuth(!isAuth);
@@ -205,39 +205,39 @@ const Navdata = () => {
             stateVariables: isAuth,
             subItems: [
                 {
-                    id: "rfpAuditDeck",
-                    label: "RFP & Audit Deck",
-                    link: "/projects/rfp-audit-deck",
-                    parentId: "Projects",
+                    id: 'rfpAuditDeck',
+                    label: 'RFP & Audit Deck',
+                    link: '/projects/rfp-audit-deck',
+                    parentId: 'Projects',
                 },
                 {
-                    id: "vendorMgmtDeck",
-                    label: "Vendor Mgmt Deck",
-                    link: "/projects/vendor-mgmt-deck",
-                    parentId: "Projects",
+                    id: 'vendorMgmtDeck',
+                    label: 'Vendor Mgmt Deck',
+                    link: '/projects/vendor-mgmt-deck',
+                    parentId: 'Projects',
                 },
             ],
         },
         {
-            id: "reporting",
-            label: "Reporting",
+            id: 'reporting',
+            label: 'Reporting',
             icon: <FeatherIcon icon="command" className="icon-dual" />,
-            link: "/reporting"
+            link: '/reporting',
         },
         {
-            id: "manage",
-            label: "Manage",
+            id: 'manage',
+            label: 'Manage',
             icon: <i className="ri-rocket-line" />,
-            link: "/manage",
+            link: '/manage',
             click: function (e) {
                 e.preventDefault();
-            }
+            },
         },
-         {
-            id: "Audits",
-            label: "Audits",
+        {
+            id: 'Audits',
+            label: 'Audits',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsAudits(!isAudits);
@@ -247,36 +247,36 @@ const Navdata = () => {
             stateVariables: isAudits,
             subItems: [
                 {
-                    id: "audit-readiness-projects",
-                    label: "Audits Readiness Projects",
-                    link: "/audits/audits-readiness-projects",
-                    parentId: "Audits",
+                    id: 'audit-readiness-projects',
+                    label: 'Audits Readiness Projects',
+                    link: '/audits/audits-readiness-projects',
+                    parentId: 'Audits',
                 },
                 {
-                    id: "statement-of-applicability",
-                    label: "Statement of Applicability",
-                    link: "/audits/statement-of-applicability",
-                    parentId: "Audits",
+                    id: 'statement-of-applicability',
+                    label: 'Statement of Applicability',
+                    link: '/audits/statement-of-applicability',
+                    parentId: 'Audits',
                 },
                 {
-                    id: "audits-projects",
-                    label: "Audit Projects",
-                    link: "/audits/audit-projects",
-                    parentId: "Audits",
+                    id: 'audits-projects',
+                    label: 'Audit Projects',
+                    link: '/audits/audit-projects',
+                    parentId: 'Audits',
                 },
                 {
-                    id: "training-deck",
-                    label: "Audit Findings",
-                    link: "/audits/audit-findings",
-                    parentId: "Audits",
-                }
+                    id: 'training-deck',
+                    label: 'Audit Findings',
+                    link: '/audits/audits-findings',
+                    parentId: 'Audits',
+                },
             ],
         },
         {
-            id: "Risk",
-            label: "Risk",
+            id: 'Risk',
+            label: 'Risk',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsRisk(!isRisk);
@@ -286,29 +286,30 @@ const Navdata = () => {
             stateVariables: isRisk,
             subItems: [
                 {
-                    id: "risk-dashboard",
-                    label: "Risk Dashboard",
-                    link: "/risk/risk-dashboard",
-                    parentId: "Risk",
+                    id: 'risk-dashboard',
+                    label: 'Risk Dashboard',
+                    link: '/risk/risk-dashboard',
+                    parentId: 'Risk',
                 },
                 {
-                    id: "risk-identification-survey",
-                    label: "Risk Identification Survey",
-                    link: "/risk/risk-identification-survey",
-                    parentId: "Risk",
+                    id: 'risk-identification-survey',
+                    label: 'Risk Identification Survey',
+                    link: '/risk/risk-identification-survey',
+                    parentId: 'Risk',
                 },
                 {
-                    id: "risk-register",
-                    label: "Risk Register",
-                    link: "/risk/risk-register",
-                    parentId: "Risk",
-                }
+                    id: 'risk-register',
+                    label: 'Risk Register',
+                    link: '/risk/risk-register',
+                    parentId: 'Risk',
+                },
             ],
-        },{
-            id: "InfoSecProgram",
-            label: "InfoSec Program",
+        },
+        {
+            id: 'InfoSecProgram',
+            label: 'InfoSec Program',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsInfoSecProgram(!isInfoSecProgram);
@@ -318,41 +319,42 @@ const Navdata = () => {
             stateVariables: isInfoSecProgram,
             subItems: [
                 {
-                    id: "products",
-                    label: "Products",
-                    link: "/infosec-program/products",
-                    parentId: "InfoSecProgram",
+                    id: 'products',
+                    label: 'Products',
+                    link: '/infosec-program/products',
+                    parentId: 'InfoSecProgram',
                 },
                 {
-                    id: "policies",
-                    label: "Policies",
-                    link: "/infosec-program/policies",
-                    parentId: "InfoSecProgram",
+                    id: 'policies',
+                    label: 'Policies',
+                    link: '/infosec-program/policies',
+                    parentId: 'InfoSecProgram',
                 },
                 {
-                    id: "procedures",
-                    label: "Procedures",
-                    link: "/infosec-program/procedures",
-                    parentId: "InfoSecProgram",
+                    id: 'procedures',
+                    label: 'Procedures',
+                    link: '/infosec-program/procedures',
+                    parentId: 'InfoSecProgram',
                 },
                 {
-                    id: "controls",
-                    label: "Controls",
-                    link: "/infosec-program/controls",
-                    parentId: "InfoSecProgram",
+                    id: 'controls',
+                    label: 'Controls',
+                    link: '/infosec-program/controls',
+                    parentId: 'InfoSecProgram',
                 },
                 {
-                    id: "evidence-tasks",
-                    label: "Evidence Tasks",
-                    link: "/infosec-program/evidence-task",
-                    parentId: "InfoSecProgram",
-                }
+                    id: 'evidence-tasks',
+                    label: 'Evidence Tasks',
+                    link: '/infosec-program/evidence-task',
+                    parentId: 'InfoSecProgram',
+                },
             ],
-        },{
-            id: "People",
-            label: "People",
+        },
+        {
+            id: 'People',
+            label: 'People',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsPeople(!isPeople);
@@ -362,61 +364,64 @@ const Navdata = () => {
             stateVariables: isPeople,
             subItems: [
                 {
-                    id: "policy-deck",
-                    label: "Users",
-                    link: "/people/policy-deck",
-                    parentId: "People",
+                    id: 'policy-deck',
+                    label: 'Users',
+                    link: '/people/policy-deck',
+                    parentId: 'People',
                 },
                 {
-                    id: "controls-deck",
-                    label: "Roles",
-                    link: "/people/roles",
-                    parentId: "People",
+                    id: 'controls-deck',
+                    label: 'Roles',
+                    link: '/people/roles',
+                    parentId: 'People',
                 },
                 {
-                    id: "policy-training",
-                    label: "Policy Training",
-                    link: "/people/policy-training",
-                    parentId: "People",
+                    id: 'policy-training',
+                    label: 'Policy Training',
+                    link: '/people/policy-training',
+                    parentId: 'People',
                 },
                 {
-                    id: "onboarding-offboarding",
-                    label: "Onboarding and Offboarding",
-                    link: "/people/onboarding-offboarding",
-                    parentId: "People",
+                    id: 'onboarding-offboarding',
+                    label: 'Onboarding and Offboarding',
+                    link: '/people/onboarding-offboarding',
+                    parentId: 'People',
                 },
                 {
-                    id: "authentication-setup",
-                    label: "Authentication Setup",
-                    link: "/people/authentication-setup",
-                    parentId: "People",
-                }
+                    id: 'authentication-setup',
+                    label: 'Authentication Setup',
+                    link: '/people/authentication-setup',
+                    parentId: 'People',
+                },
             ],
-        },{
-            id: "questionnaires",
-            label: "Questionnaires",
+        },
+        {
+            id: 'questionnaires',
+            label: 'Questionnaires',
             icon: <i className="ri-rocket-line" />,
-            link: "/questionnaires",
+            link: '/questionnaires',
             click: function (e) {
                 e.preventDefault();
                 setIscurrentState('questionnaires');
                 updateIconSidebar(e);
-            }
-        },{
-            id: "Vendors",
-            label: "Vendots",
+            },
+        },
+        {
+            id: 'Vendors',
+            label: 'Vendors',
             icon: <i className="ri-rocket-line" />,
-            link: "/vendors",
+            link: '/vendors',
             click: function (e) {
                 e.preventDefault();
                 setIscurrentState('Vendors');
                 updateIconSidebar(e);
-            }
-        },{
-            id: "AssuranceTools",
-            label: "Assurance Tools",
+            },
+        },
+        {
+            id: 'AssuranceTools',
+            label: 'Assurance Tools',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: "/#",
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIsAssuranceTools(!isAssuranceTools);
@@ -426,19 +431,19 @@ const Navdata = () => {
             stateVariables: isAssuranceTools,
             subItems: [
                 {
-                    id: "portal",
-                    label: "Portal",
-                    link: "/assurance-tools/portal",
-                    parentId: "AssuranceTools",
+                    id: 'portal',
+                    label: 'Portal',
+                    link: '/assurance-tools/portal',
+                    parentId: 'AssuranceTools',
                 },
                 {
-                    id: "security-assurance-report",
-                    label: "Security Assurance Report",
-                    link: "/assurance-tools/security-assurance-report",
-                    parentId: "AssuranceTools",
+                    id: 'security-assurance-report',
+                    label: 'Security Assurance Report',
+                    link: '/assurance-tools/security-assurance-report',
+                    parentId: 'AssuranceTools',
                 },
             ],
-        }
+        },
     ];
     return <React.Fragment>{menuItems}</React.Fragment>;
 };
