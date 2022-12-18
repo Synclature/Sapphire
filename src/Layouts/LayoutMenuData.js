@@ -150,6 +150,24 @@ const Navdata = () => {
                     link: '/e',
                     parentId: 'SamplePages',
                 },
+                {
+                    id: 'UserForm',
+                    label: 'User Form',
+                    link: '/user-form',
+                    parentId: 'SamplePages',
+                },
+                {
+                    id: 'ControlProcessForm',
+                    label: 'Control or Process Form',
+                    link: '/control-form',
+                    parentId: 'SamplePages',
+                },
+                {
+                    id: 'AssetsForm',
+                    label: 'Assets Form',
+                    link: '/assets-form',
+                    parentId: 'SamplePages',
+                },
             ],
         },
         {
@@ -364,13 +382,13 @@ const Navdata = () => {
             stateVariables: isPeople,
             subItems: [
                 {
-                    id: 'policy-deck',
+                    id: 'users',
                     label: 'Users',
-                    link: '/people/policy-deck',
+                    link: '/people/users',
                     parentId: 'People',
                 },
                 {
-                    id: 'controls-deck',
+                    id: 'roles',
                     label: 'Roles',
                     link: '/people/roles',
                     parentId: 'People',

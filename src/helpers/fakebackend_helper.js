@@ -1,19 +1,19 @@
-import { APIClient } from "./api_helper";
+import { APIClient } from './api_helper';
 
-import * as url from "./url_helper";
+import * as url from './url_helper';
 
 const api = new APIClient();
 
 // Gets the logged in user data from local session
 export const getLoggedInUser = () => {
-  const user = localStorage.getItem("user");
-  if (user) return JSON.parse(user);
-  return null;
+    const user = localStorage.getItem('user');
+    if (user) return JSON.parse(user);
+    return null;
 };
 
 // //is user is logged in
 export const isUserAuthenticated = () => {
-  return getLoggedInUser() !== null;
+    return getLoggedInUser() !== null;
 };
 
 // Register Method
@@ -28,30 +28,29 @@ export const postFakeForgetPwd = data => api.create(url.POST_FAKE_PASSWORD_FORGE
 // Edit profile
 export const postJwtProfile = data => api.create(url.POST_EDIT_JWT_PROFILE, data);
 
-export const postFakeProfile = (data) => api.update(url.POST_EDIT_PROFILE + '/' + data.idx, data);
+export const postFakeProfile = data => api.update(url.POST_EDIT_PROFILE + '/' + data.idx, data);
 
 // Register Method
 export const postJwtRegister = (url, data) => {
-  return api.create(url, data)
-    .catch(err => {
-      var message;
-      if (err.response && err.response.status) {
-        switch (err.response.status) {
-          case 404:
-            message = "Sorry! the page you are looking for could not be found";
-            break;
-          case 500:
-            message = "Sorry! something went wrong, please contact our support team";
-            break;
-          case 401:
-            message = "Invalid credentials";
-            break;
-          default:
-            message = err[1];
-            break;
+    return api.create(url, data).catch(err => {
+        var message;
+        if (err.response && err.response.status) {
+            switch (err.response.status) {
+                case 404:
+                    message = 'Sorry! the page you are looking for could not be found';
+                    break;
+                case 500:
+                    message = 'Sorry! something went wrong, please contact our support team';
+                    break;
+                case 401:
+                    message = 'Invalid credentials';
+                    break;
+                default:
+                    message = err[1];
+                    break;
+            }
         }
-      }
-      throw message;
+        throw message;
     });
 };
 
@@ -88,7 +87,8 @@ export const deleteEvent = event => api.delete(url.DELETE_EVENT, { headers: { ev
 export const getDirectContact = () => api.get(url.GET_DIRECT_CONTACT);
 
 // get Messages
-export const getMessages = roomId => api.get(`${url.GET_MESSAGES}/${roomId}`, { params: { roomId } });
+export const getMessages = roomId =>
+    api.get(`${url.GET_MESSAGES}/${roomId}`, { params: { roomId } });
 
 // add Message
 export const addMessage = message => api.create(url.ADD_MESSAGE, message);
@@ -138,7 +138,8 @@ export const getCustomers = () => api.get(url.GET_CUSTOMERS);
 export const addNewCustomer = customer => api.create(url.ADD_NEW_CUSTOMER, customer);
 
 // update Customers
-export const updateCustomer = customer => api.update(url.UPDATE_CUSTOMER + '/' + customer._id, customer);
+export const updateCustomer = customer =>
+    api.update(url.UPDATE_CUSTOMER + '/' + customer._id, customer);
 
 // delete Customers
 export const deleteCustomer = customer => api.delete(url.DELETE_CUSTOMER + '/' + customer);
@@ -147,7 +148,7 @@ export const deleteCustomer = customer => api.delete(url.DELETE_CUSTOMER + '/' +
 export const getSellers = () => api.get(url.GET_SELLERS);
 
 // Project
-// get Project list 
+// get Project list
 export const getProjectList = () => api.get(url.GET_PROJECT_LIST);
 
 // Tasks
@@ -183,7 +184,8 @@ export const getCompanies = () => api.get(url.GET_COMPANIES);
 export const addNewCompanies = company => api.create(url.ADD_NEW_COMPANIES, company);
 
 // update Companies
-export const updateCompanies = company => api.update(url.UPDATE_COMPANIES + '/' + company._id, company);
+export const updateCompanies = company =>
+    api.update(url.UPDATE_COMPANIES + '/' + company._id, company);
 
 // delete Companies
 export const deleteCompanies = company => api.delete(url.DELETE_COMPANIES + '/' + company);
@@ -223,17 +225,17 @@ export const updateInvoice = invoice => api.update(url.UPDATE_INVOICE + '/' + in
 // delete Invoice
 export const deleteInvoice = invoice => api.delete(url.DELETE_INVOICE + '/' + invoice);
 
-// Support Tickets 
+// Support Tickets
 // Tickets
 export const getTicketsList = () => api.get(url.GET_TICKETS_LIST);
 
-// add Tickets 
+// add Tickets
 export const addNewTicket = ticket => api.create(url.ADD_NEW_TICKET, ticket);
 
-// update Tickets 
+// update Tickets
 export const updateTicket = ticket => api.update(url.UPDATE_TICKET + '/' + ticket._id, ticket);
 
-// delete Tickets 
+// delete Tickets
 export const deleteTicket = ticket => api.delete(url.DELETE_TICKET + '/' + ticket);
 
 // Dashboard Analytics
@@ -246,7 +248,8 @@ export const getMonthlyData = () => api.get(url.GET_MONTHLY_DATA);
 // Audiences Metrics
 export const getAllAudiencesMetricsData = () => api.get(url.GET_ALLAUDIENCESMETRICS_DATA);
 export const getMonthlyAudiencesMetricsData = () => api.get(url.GET_MONTHLYAUDIENCESMETRICS_DATA);
-export const getHalfYearlyAudiencesMetricsData = () => api.get(url.GET_HALFYEARLYAUDIENCESMETRICS_DATA);
+export const getHalfYearlyAudiencesMetricsData = () =>
+    api.get(url.GET_HALFYEARLYAUDIENCESMETRICS_DATA);
 export const getYearlyAudiencesMetricsData = () => api.get(url.GET_YEARLYAUDIENCESMETRICS_DATA);
 
 // Users by Device
@@ -288,7 +291,6 @@ export const getMonthRevenueData = () => api.get(url.GET_MONTHREVENUE_DATA);
 export const getHalfYearRevenueData = () => api.get(url.GET_HALFYEARREVENUE_DATA);
 export const getYearRevenueData = () => api.get(url.GET_YEARREVENUE_DATA);
 
-
 // Dashboard Crypto
 // Portfolio
 export const getBtcPortfolioData = () => api.get(url.GET_BTCPORTFOLIO_DATA);
@@ -323,36 +325,37 @@ export const gethalfYearMarketplaceData = () => api.get(url.GET_HALFYEARMARKETPL
 export const getYearMarketplaceData = () => api.get(url.GET_YEARMARKETPLACE_DATA);
 
 // Project
-export const addProjectList = (project) => api.create(url.ADD_NEW_PROJECT, project);
-export const updateProjectList = (project) => api.put(url.UPDATE_PROJECT, project);
-export const deleteProjectList = (project) => api.delete(url.DELETE_PROJECT, { headers: { project } });
+export const addProjectList = project => api.create(url.ADD_NEW_PROJECT, project);
+export const updateProjectList = project => api.put(url.UPDATE_PROJECT, project);
+export const deleteProjectList = project =>
+    api.delete(url.DELETE_PROJECT, { headers: { project } });
 
 // Pages > Team
-export const getTeamData = (team) => api.get(url.GET_TEAMDATA, team);
-export const deleteTeamData = (team) => api.delete(url.DELETE_TEAMDATA, { headers: { team } });
-export const addTeamData = (team) => api.create(url.ADD_NEW_TEAMDATA, team);
-export const updateTeamData = (team) => api.put(url.UPDATE_TEAMDATA, team);
+export const getTeamData = team => api.get(url.GET_TEAMDATA, team);
+export const deleteTeamData = team => api.delete(url.DELETE_TEAMDATA, { headers: { team } });
+export const addTeamData = team => api.create(url.ADD_NEW_TEAMDATA, team);
+export const updateTeamData = team => api.put(url.UPDATE_TEAMDATA, team);
 
 // File Manager
 
 // Folder
-export const getFolders = (folder) => api.get(url.GET_FOLDERS, folder);
-export const deleteFolder = (folder) => api.delete(url.DELETE_FOLDER, { headers: { folder } });
-export const addNewFolder = (folder) => api.create(url.ADD_NEW_FOLDER, folder);
-export const updateFolder = (folder) => api.put(url.UPDATE_FOLDER, folder);
+export const getFolders = folder => api.get(url.GET_FOLDERS, folder);
+export const deleteFolder = folder => api.delete(url.DELETE_FOLDER, { headers: { folder } });
+export const addNewFolder = folder => api.create(url.ADD_NEW_FOLDER, folder);
+export const updateFolder = folder => api.put(url.UPDATE_FOLDER, folder);
 
 // File
-export const getFiles = (file) => api.get(url.GET_FILES, file);
-export const deleteFile = (file) => api.delete(url.DELETE_FILE, { headers: { file } });
-export const addNewFile = (file) => api.create(url.ADD_NEW_FILE, file);
-export const updateFile = (file) => api.put(url.UPDATE_FILE, file);
+export const getFiles = file => api.get(url.GET_FILES, file);
+export const deleteFile = file => api.delete(url.DELETE_FILE, { headers: { file } });
+export const addNewFile = file => api.create(url.ADD_NEW_FILE, file);
+export const updateFile = file => api.put(url.UPDATE_FILE, file);
 
 // To Do
-export const getTodos = (todo) => api.get(url.GET_TODOS, todo);
-export const deleteTodo = (todo) => api.delete(url.DELETE_TODO, { headers: { todo } });
-export const addNewTodo = (todo) => api.create(url.ADD_NEW_TODO, todo);
-export const updateTodo = (todo) => api.put(url.UPDATE_TODO, todo);
+export const getTodos = todo => api.get(url.GET_TODOS, todo);
+export const deleteTodo = todo => api.delete(url.DELETE_TODO, { headers: { todo } });
+export const addNewTodo = todo => api.create(url.ADD_NEW_TODO, todo);
+export const updateTodo = todo => api.put(url.UPDATE_TODO, todo);
 
 // To do Project
-export const getProjects = (project) => api.get(url.GET_PROJECTS, project);
-export const addNewProject = (project) => api.create(url.ADD_NEW_TODO_PROJECT, project);
+export const getProjects = project => api.get(url.GET_PROJECTS, project);
+export const addNewProject = project => api.create(url.ADD_NEW_TODO_PROJECT, project);

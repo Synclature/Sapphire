@@ -8,6 +8,9 @@ import Dashboard from '../pages/Dashboard';
 import A from '../pages/A';
 import SOA1 from '../pages/SOA';
 import D from '../pages/D';
+import UserForm from '../pages/Forms/userForm';
+import ControlProcessForm from '../pages/Forms/controlProcessForm';
+import AssetsForm from '../pages/Forms/assetsForm';
 
 // Audits
 import SOA from '../pages/Audits/SOA';
@@ -55,6 +58,9 @@ const authProtectedRoutes = [
     { path: '/a', component: A },
     { path: '/soa', component: SOA1 },
     { path: '/d', component: D },
+    { path: '/user-form', component: UserForm },
+    { path: '/control-form', component: ControlProcessForm },
+    { path: '/assets-form', component: AssetsForm },
 
     //Audits
     { path: '/audits/audit-projects', component: AuditProjects },
