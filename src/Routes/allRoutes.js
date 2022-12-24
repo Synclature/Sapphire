@@ -22,6 +22,7 @@ import AuditsReadinessProjects from '../pages/Audits/AuditsReadinessProjects';
 import RiskDashboard from '../pages/Risk/RiskDashboard';
 import RiskIdentificationSurvey from '../pages/Risk/RiskIdentificationSurvey';
 import RiskRegister from '../pages/Risk/RiskRegister';
+import CreateRiskRegister from '../pages/Risk/RiskRegister/create';
 
 // InfoSec Program
 import Controls from '../pages/InfoSecProgram/Controls';
@@ -72,6 +73,7 @@ const authProtectedRoutes = [
     { path: '/risk/risk-dashboard', component: RiskDashboard },
     { path: '/risk/risk-identification-survey', component: RiskIdentificationSurvey },
     { path: '/risk/risk-register', component: RiskRegister },
+    { path: '/risk/risk-register/create', component: CreateRiskRegister },
 
     //InfoSec Program
     { path: '/infosec-program/controls', component: Controls },
