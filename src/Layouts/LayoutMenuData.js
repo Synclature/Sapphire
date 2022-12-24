@@ -436,6 +436,17 @@ const Navdata = () => {
             },
         },
         {
+            id: 'vulnerabilityManagement',
+            label: 'vulnerabilityManagement',
+            icon: <i className="ri-rocket-line" />,
+            link: '/vulnerability-management',
+            click: function (e) {
+                e.preventDefault();
+                setIscurrentState('vulnerabilityManagement');
+                updateIconSidebar(e);
+            },
+        },
+        {
             id: 'AssuranceTools',
             label: 'Assurance Tools',
             icon: <FeatherIcon icon="grid" className="icon-dual" />,

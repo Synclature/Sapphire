@@ -45,6 +45,10 @@ import Manage from '../pages/Manage';
 import Portal from '../pages/AssuranceTools/Portal';
 import SecurityAssuranceReport from '../pages/AssuranceTools/SecurityAssuranceReport';
 
+// Vulnerability Management
+import VulnerabilityManagement from '../pages/VulnerabilityManagement';
+import CreateVulnerabilityManagement from '../pages/VulnerabilityManagement/create';
+
 //login
 import Login from '../pages/Authentication/Login';
 import ForgetPasswordPage from '../pages/Authentication/ForgetPassword';
@@ -88,6 +92,10 @@ const authProtectedRoutes = [
     { path: '/people/policy-training', component: PolicyTraining },
     { path: '/people/roles', component: Roles },
     { path: '/people/users', component: Users },
+
+    // Vulnerability Management
+    { path: '/vulnerability-management', component: VulnerabilityManagement },
+    { path: '/vulnerability-management/create', component: CreateVulnerabilityManagement },
 
     // Manage
     { path: '/manage', component: Manage },
