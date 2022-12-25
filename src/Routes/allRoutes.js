@@ -37,6 +37,7 @@ import OnboardingAndOffboarding from '../pages/People/OnboardingAndOffboarding';
 import PolicyTraining from '../pages/People/PolicyTraining';
 import Roles from '../pages/People/Roles';
 import Users from '../pages/People/Users';
+import InviteUser from 'pages/People/Users/invite';
 
 //Manage
 import Manage from '../pages/Manage';
@@ -92,6 +93,7 @@ const authProtectedRoutes = [
     { path: '/people/policy-training', component: PolicyTraining },
     { path: '/people/roles', component: Roles },
     { path: '/people/users', component: Users },
+    { path: '/people/user/invite', component: InviteUser },
 
     // Vulnerability Management
     { path: '/vulnerability-management', component: VulnerabilityManagement },

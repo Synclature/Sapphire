@@ -307,11 +307,13 @@ const RiskRegister = () => {
                                                 name: 'Risk Identification Date',
                                                 formatter: cell =>
                                                     _(<span className="fw-semibold">{cell}</span>),
+                                                width: '300px',
                                             },
                                             {
                                                 name: 'Risk Owner/ Department',
                                                 formatter: cell =>
                                                     _(<span className="fw-semibold">{cell}</span>),
+                                                width: '300px',
                                             },
                                             {
                                                 name: 'Context',

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import BreadCrumb from '../../../Components/Common/BreadCrumb';
 import { Grid, _ } from 'gridjs-react';
+import { Link } from 'react-router-dom';
 
 const users = [
     {
@@ -91,15 +92,19 @@ const users = [
 ];
 
 const Users = () => {
-    document.title = 'Users';
+    document.title = 'Invite User';
     return (
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Users" pageTitle="Users" />
+                    <BreadCrumb title="Invite User" pageTitle="Invite User" />
                     <Row>
                         <Card>
-                            <CardHeader></CardHeader>
+                            <CardHeader className="d-flex align-items-center justify-content-end">
+                                <Link to="/people/user/invite" className="btn btn-primary">
+                                    <i className="las la-plus mr-sm-2"></i>Invite User
+                                </Link>
+                            </CardHeader>
                             <CardBody>
                                 <Grid
                                     data={users}
