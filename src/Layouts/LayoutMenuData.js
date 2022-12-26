@@ -436,7 +436,7 @@ const Navdata = () => {
             },
         },
         {
-            id: 'vulnerabilityManagement',
+            id: 'Vulnerability Management',
             label: 'vulnerabilityManagement',
             icon: <i className="ri-rocket-line" />,
             link: '/vulnerability-management',

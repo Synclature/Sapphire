@@ -349,11 +349,13 @@ const RiskRegister = () => {
                                                 name: 'Review Date',
                                                 formatter: cell =>
                                                     _(<span className="fw-semibold">{cell}</span>),
+                                                width: '100px',
                                             },
                                             {
                                                 name: 'Review Comments',
                                                 formatter: cell =>
                                                     _(<span className="fw-semibold">{cell}</span>),
+                                                width: '300px',
                                             },
                                         ]}
                                         search={true}
