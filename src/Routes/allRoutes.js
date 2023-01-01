@@ -18,6 +18,11 @@ import AuditProjects from '../pages/Audits/AuditProjects';
 import AuditsFindings from '../pages/Audits/AuditsFindings';
 import AuditsReadinessProjects from '../pages/Audits/AuditsReadinessProjects';
 
+// IT Assets
+import ITAssetCreate from '../pages/ITAssets/create';
+import ITAssetManagement from '../pages/ITAssets/management';
+import ITAssetApprove from '../pages/ITAssets/approve';
+
 // Risk
 import RiskDashboard from '../pages/Risk/RiskDashboard';
 import RiskIdentificationSurvey from '../pages/Risk/RiskIdentificationSurvey';
@@ -73,6 +78,11 @@ const authProtectedRoutes = [
     { path: '/audits/audits-findings', component: AuditsFindings },
     { path: '/audits/audits-readiness-projects', component: AuditsReadinessProjects },
     { path: '/audits/statement-of-applicability', component: SOA },
+
+    // IT Assets
+    { path: '/itasset/create', component: ITAssetCreate },
+    { path: '/itasset/management', component: ITAssetManagement },
+    { path: '/itasset/approve', component: ITAssetApprove },
 
     //Risk
     { path: '/risk/risk-dashboard', component: RiskDashboard },

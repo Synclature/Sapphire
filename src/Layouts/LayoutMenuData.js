@@ -16,6 +16,7 @@ const Navdata = () => {
     const [isAdvanceUi, setIsAdvanceUi] = useState(false);
     const [isForms, setIsForms] = useState(false);
     const [isAudits, setIsAudits] = useState(false);
+    const [isItAssets, setIsItAssets] = useState(false);
     const [isRisk, setIsRisk] = useState(false);
     const [isInfoSecProgram, setIsInfoSecProgram] = useState(false);
     const [isPeople, setIsPeople] = useState(false);
@@ -66,8 +67,11 @@ const Navdata = () => {
         if (iscurrentState !== 'Audits') {
             setIsForms(false);
         }
+        if (iscurrentState !== 'It Assets') {
+            setIsItAssets(false);
+        }
         if (iscurrentState !== 'Risk') {
-            setIsForms(false);
+            setIsRisk(false);
         }
         if (iscurrentState !== 'InfoSec Program') {
             setIsForms(false);
@@ -287,6 +291,39 @@ const Navdata = () => {
                     label: 'Audit Findings',
                     link: '/audits/audits-findings',
                     parentId: 'Audits',
+                },
+            ],
+        },
+        {
+            id: 'ITAssets',
+            label: 'IT Assets',
+            icon: <i className="las la-server"></i>,
+            link: '/#',
+            click: function (e) {
+                e.preventDefault();
+                setIsItAssets(!isItAssets);
+                setIscurrentState('IT Assets');
+                updateIconSidebar(e);
+            },
+            stateVariables: isItAssets,
+            subItems: [
+                {
+                    id: 'create-it-asset',
+                    label: 'Create IT Asset',
+                    link: '/itasset/create',
+                    parentId: 'ITAssets',
+                },
+                {
+                    id: 'it-asset-management',
+                    label: 'IT Asset Management',
+                    link: '/itasset/management',
+                    parentId: 'ITAssets',
+                },
+                {
+                    id: 'approve-asset',
+                    label: 'Approve Asset',
+                    link: '/itasset/approve',
+                    parentId: 'ITAssets',
                 },
             ],
         },
