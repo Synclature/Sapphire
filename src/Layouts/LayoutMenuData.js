@@ -463,14 +463,23 @@ const Navdata = () => {
         },
         {
             id: 'Vendors',
-            label: 'Vendors',
+            label: 'Third Party Vendors',
             icon: <i className="ri-rocket-line" />,
-            link: '/vendors',
+            link: '/#',
             click: function (e) {
                 e.preventDefault();
                 setIscurrentState('Vendors');
                 updateIconSidebar(e);
             },
+            stateVariables: isPeople,
+            subItems: [
+                {
+                    id: 'vendorDashboard',
+                    label: 'Vendor Dashboard',
+                    link: '/vendor/dashboard',
+                    parentId: 'vendors',
+                },
+            ],
         },
         {
             id: 'Vulnerability Management',
