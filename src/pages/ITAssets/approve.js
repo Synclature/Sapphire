@@ -65,25 +65,39 @@ const ITAssetApprove = () => {
                                             _(
                                                 row.cells[7].data.toLowerCase() === 'pending' ? (
                                                     <div className="hstack gap-2">
-                                                        <button className="btn btn-sm btn-soft-success edit-list">
+                                                        <button
+                                                            className="btn btn-sm btn-soft-success edit-list"
+                                                            title="Approved">
                                                             <i className="ri-check-fill align-bottom" />
                                                         </button>
-                                                        <button className="btn btn-sm btn-soft-danger remove-list">
+                                                        <button
+                                                            className="btn btn-sm btn-soft-danger remove-list"
+                                                            title="Reject">
                                                             <i className="ri-close-fill align-bottom" />
                                                         </button>
                                                     </div>
                                                 ) : row.cells[7].data.toLowerCase() ===
                                                   'rejected' ? (
                                                     <div className="hstack gap-2">
-                                                        <button className="btn btn-sm btn-soft-info edit-list">
+                                                        <button
+                                                            className="btn btn-sm btn-soft-info edit-list"
+                                                            title="Revoke">
                                                             <i className="ri-refresh-line align-bottom" />
                                                         </button>
-                                                        <button className="btn btn-sm btn-soft-danger remove-list">
+                                                        <button
+                                                            className="btn btn-sm btn-soft-danger remove-list"
+                                                            title="Delete">
                                                             <i className="ri-delete-bin-line align-bottom" />
                                                         </button>
                                                     </div>
                                                 ) : (
-                                                    ''
+                                                    <div className="hstack gap-2">
+                                                        <button
+                                                            className="btn btn-sm btn-soft-info edit-list"
+                                                            title="Revoke">
+                                                            <i className="ri-refresh-line align-bottom" />
+                                                        </button>
+                                                    </div>
                                                 ),
                                             ),
                                     },
