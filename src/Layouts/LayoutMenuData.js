@@ -21,6 +21,7 @@ const Navdata = () => {
     const [isInfoSecProgram, setIsInfoSecProgram] = useState(false);
     const [isPeople, setIsPeople] = useState(false);
     const [isAssuranceTools, setIsAssuranceTools] = useState(false);
+    const [isVendor, setIsVendor] = useState(false);
 
     const [iscurrentState, setIscurrentState] = useState('Dashboard');
 
@@ -468,16 +469,29 @@ const Navdata = () => {
             link: '/#',
             click: function (e) {
                 e.preventDefault();
+                setIsVendor(!isVendor);
                 setIscurrentState('Vendors');
                 updateIconSidebar(e);
             },
-            stateVariables: isPeople,
+            stateVariables: isVendor,
             subItems: [
                 {
                     id: 'vendorDashboard',
                     label: 'Vendor Dashboard',
-                    link: '/vendor/dashboard',
-                    parentId: 'vendors',
+                    link: '/third-party-vendor/dashboard',
+                    parentId: 'Vendors',
+                },
+                {
+                    id: 'vendorList',
+                    label: 'Vendor List',
+                    link: '/third-party-vendor/list',
+                    parentId: 'Vendors',
+                },
+                {
+                    id: 'vendorQuestionnaire',
+                    label: 'Vendor Questionnaire',
+                    link: '/third-party-vendor/questionnaire',
+                    parentId: 'Vendors',
                 },
             ],
         },

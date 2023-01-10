@@ -1,31 +1,80 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
-import BreadCrumb from '../../Components/Common/BreadCrumb';
-import { Grid, _ } from 'gridjs-react';
+import { Container, Row, Col, Card, CardBody } from 'reactstrap';
+import BreadCrumb from '../../../Components/Common/BreadCrumb';
+import FeatherIcon from 'feather-icons-react';
+import CountUp from 'react-countup';
+import VendorRiskOverTime from './vendorRiskOverTime';
+import VendorRiskBusinessUnit from './vendorRiskBusinessUnit';
 
 // Chart
 import { Pie, Doughnut } from 'react-chartjs-2';
-import getChartColorsArray from '../../Components/Common/ChartsDynamicColor';
+import getChartColorsArray from '../../../Components/Common/ChartsDynamicColor';
 
 const VendorDashboard = () => {
-    document.title = 'Risk Dashboard';
+    document.title = 'Vendor Dashboard';
     return (
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Risk Dashboard" pageTitle="Risk Dashboard" />
+                    <BreadCrumb title="Vendor Dashboard" pageTitle="Vendor Dashboard" />
                     <Row>
                         <Col lg="4">
-                            <Card>
-                                <CardHeader>
-                                    Total Vendors
-                                </CardHeader>
-                                <CardBody>
-                                    
+                            <Card className="card card-animate">
+                                <CardBody className="card-body">
+                                    <div className="d-flex justify-content-between">
+                                        <div>
+                                            <p className="fw-semibold text-muted mb-0">
+                                                Total Vendors
+                                            </p>
+                                            <h1 className="mt-4 ff-secondary fw-bold">
+                                                <CountUp start={0} end={30} duration={3} />
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <div className="avatar-sm flex-shrink-0">
+                                                <span className="avatar-title bg-soft-success rounded-circle fs-2">
+                                                    <FeatherIcon
+                                                        icon="users"
+                                                        className="text-success"></FeatherIcon>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </Card>
+
+                            <Card className="card card-animate">
+                                <CardBody className="card-body">
+                                    <div className="d-flex justify-content-between">
+                                        <div>
+                                            <p className="fw-semibold text-muted mb-0">
+                                                Total High Risk Vendors
+                                            </p>
+                                            <h1 className="mt-4 ff-secondary fw-bold">
+                                                <CountUp start={0} end={14} duration={3} />
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <div className="avatar-sm flex-shrink-0">
+                                                <span className="avatar-title bg-soft-danger rounded-circle fs-2">
+                                                    <FeatherIcon
+                                                        icon="alert-triangle"
+                                                        className="text-danger"></FeatherIcon>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </CardBody>
                             </Card>
                         </Col>
-                        <Col lg="8"></Col>
+                        <Col lg="8">
+                            <VendorRiskOverTime dataColors='["--vz-danger"]' />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg="6">
+                            <VendorRiskBusinessUnit dataColors='["--vz-info", "--vz-warning", "--vz-danger", "--vz-red"]' />
+                        </Col>
                     </Row>
                 </Container>
             </div>

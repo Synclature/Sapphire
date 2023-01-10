@@ -49,6 +49,8 @@ import Manage from '../pages/Manage';
 
 // Vendor
 import VendorDashboard from '../pages/vendors/dashboard';
+import VendorList from '../pages/vendors/list';
+import VendorQuestionnaire from '../pages/vendors/qestionnaire';
 
 //Assurance Tools
 import Portal from '../pages/AssuranceTools/Portal';
@@ -116,7 +118,9 @@ const authProtectedRoutes = [
     { path: '/manage', component: Manage },
 
     // Vendor
-    { path: '/vendor/dashboard', component: VendorDashboard },
+    { path: '/third-party-vendor/dashboard', component: VendorDashboard },
+    { path: '/third-party-vendor/list', component: VendorList },
+    { path: '/third-party-vendor/questionnaire', component: VendorQuestionnaire },
 
     // this route should be at the end of all other routes
     // eslint-disable-next-line react/display-name
