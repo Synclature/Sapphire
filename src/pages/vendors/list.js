@@ -13,7 +13,7 @@ const RiskRegisterData = [
         'A',
         'Frederick.Smith@aws.com',
         'Arshdeep Sood',
-        'Critical',
+        'critical',
         'Active',
     ],
     [
@@ -95,13 +95,37 @@ const VendorList = () => {
                                             {
                                                 name: 'Aggregate Risk Level',
                                                 formatter: cell =>
-                                                    _(<span className="fw-semibold">{cell}</span>),
-                                                width: '100px',
+                                                    _(
+                                                        cell === 'low' ? (
+                                                            <span className="text-center">
+                                                                <i className="mdi mdi-flag text-info fs-2"></i>
+                                                            </span>
+                                                        ) : cell === 'medium' ? (
+                                                            <span className="text-center">
+                                                                <i className="mdi mdi-flag text-soft-warning fs-2"></i>
+                                                            </span>
+                                                        ) : cell === 'hight' ? (
+                                                            <span className="text-center">
+                                                                <i className="mdi mdi-flag text-soft-danger fs-2"></i>
+                                                            </span>
+                                                        ) : cell === 'critical' ? (
+                                                            <span className="text-center">
+                                                                <i className="mdi mdi-flag text-danger fs-2"></i>
+                                                            </span>
+                                                        ) : (
+                                                            ''
+                                                        ),
+                                                    ),
+                                                width: '200px',
                                             },
                                             {
                                                 name: 'Status',
                                                 formatter: cell =>
-                                                    _(<span className="fw-semibold">{cell}</span>),
+                                                    _(
+                                                        <span className="badge bg-success">
+                                                            {cell}
+                                                        </span>,
+                                                    ),
                                                 width: '100px',
                                             },
                                         ]}
