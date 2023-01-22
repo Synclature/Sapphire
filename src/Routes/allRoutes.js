@@ -12,6 +12,12 @@ import UserForm from '../pages/Forms/userForm';
 import ControlProcessForm from '../pages/Forms/controlProcessForm';
 import AssetsForm from '../pages/Forms/assetsForm';
 
+// Security Compliance
+import PolicyDeck from '../pages/SecurityCompliance/PolicyDeck'
+import ControlsDeck from '../pages/SecurityCompliance/ControlsDeck';
+import CertificationsDeck from '../pages/SecurityCompliance/CertificationsDeck';
+import TrainingDeck from '../pages/SecurityCompliance/TrainingDeck';
+
 // Audits
 import SOA from '../pages/Audits/SOA';
 import AuditProjects from '../pages/Audits/AuditProjects';
@@ -41,6 +47,8 @@ import AuthenticationSetup from '../pages/People/AuthenticationSetup';
 import OnboardingAndOffboarding from '../pages/People/OnboardingAndOffboarding';
 import PolicyTraining from '../pages/People/PolicyTraining';
 import Roles from '../pages/People/Roles';
+import Permissions from '../pages/People/Permissions';
+import PName from '../pages/People/Permissions/pname';
 import Users from '../pages/People/Users';
 import InviteUser from 'pages/People/Users/invite';
 
@@ -78,6 +86,12 @@ const authProtectedRoutes = [
     { path: '/control-form', component: ControlProcessForm },
     { path: '/assets-form', component: AssetsForm },
 
+    // Security Compliance
+    { path: '/security-compliance/policy-deck', component: PolicyDeck },
+    { path: '/security-compliance/controls-deck', component: ControlsDeck },
+    { path: '/security-compliance/certifications-deck', component: CertificationsDeck },
+    { path: '/security-compliance/training-deck', component: TrainingDeck },
+
     //Audits
     { path: '/audits/audit-projects', component: AuditProjects },
     { path: '/audits/audits-findings', component: AuditsFindings },
@@ -107,6 +121,8 @@ const authProtectedRoutes = [
     { path: '/people/onboarding-offboarding', component: OnboardingAndOffboarding },
     { path: '/people/policy-training', component: PolicyTraining },
     { path: '/people/roles', component: Roles },
+    { path: '/people/permissions', component: Permissions },
+    { path: '/people/permission/:slug', component: PName },
     { path: '/people/users', component: Users },
     { path: '/people/user/invite', component: InviteUser },
 

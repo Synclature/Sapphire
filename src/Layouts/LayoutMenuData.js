@@ -208,8 +208,8 @@ const Navdata = () => {
                 },
                 {
                     id: 'training-deck',
-                    label: 'Traning Deck',
-                    link: '/security-compliance/taining-deck',
+                    label: 'Training Deck',
+                    link: '/security-compliance/training-deck',
                     parentId: 'SecurityCompliance',
                 },
             ],
@@ -429,6 +429,12 @@ const Navdata = () => {
                     id: 'roles',
                     label: 'Roles',
                     link: '/people/roles',
+                    parentId: 'People',
+                },
+                {
+                    id: 'permissions',
+                    label: 'Permissions',
+                    link: '/people/permissions',
                     parentId: 'People',
                 },
                 {
