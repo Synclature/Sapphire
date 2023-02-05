@@ -175,87 +175,87 @@ const Navdata = () => {
                 },
             ],
         },
-        {
-            id: 'SecurityCompliance',
-            label: 'Security & Compliance',
-            icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: '/#',
-            click: function (e) {
-                e.preventDefault();
-                setIsSecurityCompliance(!isSecurityCompliance);
-                setIscurrentState('SecurityCompliance');
-                updateIconSidebar(e);
-            },
-            stateVariables: isSecurityCompliance,
-            subItems: [
-                {
-                    id: 'policy-deck',
-                    label: 'Policy Deck',
-                    link: '/security-compliance/policy-deck',
-                    parentId: 'SecurityCompliance',
-                },
-                {
-                    id: 'controls-deck',
-                    label: 'Controls Deck',
-                    link: '/security-compliance/controls-deck',
-                    parentId: 'SecurityCompliance',
-                },
-                {
-                    id: 'certifications-deck',
-                    label: 'Certifications Deck',
-                    link: '/security-compliance/certifications-deck',
-                    parentId: 'SecurityCompliance',
-                },
-                {
-                    id: 'training-deck',
-                    label: 'Training Deck',
-                    link: '/security-compliance/training-deck',
-                    parentId: 'SecurityCompliance',
-                },
-            ],
-        },
-        {
-            id: 'Projects',
-            label: 'Projects',
-            icon: <FeatherIcon icon="users" className="icon-dual" />,
-            link: '/#',
-            click: function (e) {
-                e.preventDefault();
-                setIsAuth(!isAuth);
-                setIscurrentState('Projects');
-                updateIconSidebar(e);
-            },
-            stateVariables: isAuth,
-            subItems: [
-                {
-                    id: 'rfpAuditDeck',
-                    label: 'RFP & Audit Deck',
-                    link: '/projects/rfp-audit-deck',
-                    parentId: 'Projects',
-                },
-                {
-                    id: 'vendorMgmtDeck',
-                    label: 'Vendor Mgmt Deck',
-                    link: '/projects/vendor-mgmt-deck',
-                    parentId: 'Projects',
-                },
-            ],
-        },
-        {
-            id: 'reporting',
-            label: 'Reporting',
-            icon: <FeatherIcon icon="command" className="icon-dual" />,
-            link: '/reporting',
-        },
-        {
-            id: 'manage',
-            label: 'Manage',
-            icon: <i className="ri-rocket-line" />,
-            link: '/manage',
-            click: function (e) {
-                e.preventDefault();
-            },
-        },
+        // {
+        //     id: 'SecurityCompliance',
+        //     label: 'Security & Compliance',
+        //     icon: <FeatherIcon icon="grid" className="icon-dual" />,
+        //     link: '/#',
+        //     click: function (e) {
+        //         e.preventDefault();
+        //         setIsSecurityCompliance(!isSecurityCompliance);
+        //         setIscurrentState('SecurityCompliance');
+        //         updateIconSidebar(e);
+        //     },
+        //     stateVariables: isSecurityCompliance,
+        //     subItems: [
+        //         {
+        //             id: 'policy-deck',
+        //             label: 'Policy Deck',
+        //             link: '/security-compliance/policy-deck',
+        //             parentId: 'SecurityCompliance',
+        //         },
+        //         {
+        //             id: 'controls-deck',
+        //             label: 'Controls Deck',
+        //             link: '/security-compliance/controls-deck',
+        //             parentId: 'SecurityCompliance',
+        //         },
+        //         {
+        //             id: 'certifications-deck',
+        //             label: 'Certifications Deck',
+        //             link: '/security-compliance/certifications-deck',
+        //             parentId: 'SecurityCompliance',
+        //         },
+        //         {
+        //             id: 'training-deck',
+        //             label: 'Training Deck',
+        //             link: '/security-compliance/training-deck',
+        //             parentId: 'SecurityCompliance',
+        //         },
+        //     ],
+        // },
+        // {
+        //     id: 'Projects',
+        //     label: 'Projects',
+        //     icon: <FeatherIcon icon="users" className="icon-dual" />,
+        //     link: '/#',
+        //     click: function (e) {
+        //         e.preventDefault();
+        //         setIsAuth(!isAuth);
+        //         setIscurrentState('Projects');
+        //         updateIconSidebar(e);
+        //     },
+        //     stateVariables: isAuth,
+        //     subItems: [
+        //         {
+        //             id: 'rfpAuditDeck',
+        //             label: 'RFP & Audit Deck',
+        //             link: '/projects/rfp-audit-deck',
+        //             parentId: 'Projects',
+        //         },
+        //         {
+        //             id: 'vendorMgmtDeck',
+        //             label: 'Vendor Mgmt Deck',
+        //             link: '/projects/vendor-mgmt-deck',
+        //             parentId: 'Projects',
+        //         },
+        //     ],
+        // },
+        // {
+        //     id: 'reporting',
+        //     label: 'Reporting',
+        //     icon: <FeatherIcon icon="command" className="icon-dual" />,
+        //     link: '/reporting',
+        // },
+        // {
+        //     id: 'manage',
+        //     label: 'Manage',
+        //     icon: <i className="ri-rocket-line" />,
+        //     link: '/manage',
+        //     click: function (e) {
+        //         e.preventDefault();
+        //     },
+        // },
         {
             id: 'Audits',
             label: 'Audits',
@@ -457,17 +457,17 @@ const Navdata = () => {
                 },
             ],
         },
-        {
-            id: 'questionnaires',
-            label: 'Questionnaires',
-            icon: <i className="ri-rocket-line" />,
-            link: '/questionnaires',
-            click: function (e) {
-                e.preventDefault();
-                setIscurrentState('questionnaires');
-                updateIconSidebar(e);
-            },
-        },
+        // {
+        //     id: 'questionnaires',
+        //     label: 'Questionnaires',
+        //     icon: <i className="ri-rocket-line" />,
+        //     link: '/questionnaires',
+        //     click: function (e) {
+        //         e.preventDefault();
+        //         setIscurrentState('questionnaires');
+        //         updateIconSidebar(e);
+        //     },
+        // },
         {
             id: 'Vendors',
             label: 'Third Party Vendors',
@@ -502,8 +502,8 @@ const Navdata = () => {
             ],
         },
         {
-            id: 'Vulnerability Management',
-            label: 'vulnerabilityManagement',
+            label: 'Vulnerability Management',
+            id: 'vulnerabilityManagement',
             icon: <i className="ri-rocket-line" />,
             link: '/vulnerability-management',
             click: function (e) {

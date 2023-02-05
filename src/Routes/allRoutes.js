@@ -13,7 +13,7 @@ import ControlProcessForm from '../pages/Forms/controlProcessForm';
 import AssetsForm from '../pages/Forms/assetsForm';
 
 // Security Compliance
-import PolicyDeck from '../pages/SecurityCompliance/PolicyDeck'
+import PolicyDeck from '../pages/SecurityCompliance/PolicyDeck';
 import ControlsDeck from '../pages/SecurityCompliance/ControlsDeck';
 import CertificationsDeck from '../pages/SecurityCompliance/CertificationsDeck';
 import TrainingDeck from '../pages/SecurityCompliance/TrainingDeck';
@@ -46,6 +46,7 @@ import Products from '../pages/InfoSecProgram/Products';
 import AuthenticationSetup from '../pages/People/AuthenticationSetup';
 import OnboardingAndOffboarding from '../pages/People/OnboardingAndOffboarding';
 import PolicyTraining from '../pages/People/PolicyTraining';
+import TrainingGroup from '../pages/People/PolicyTraining/TrainingGroup';
 import Roles from '../pages/People/Roles';
 import Permissions from '../pages/People/Permissions';
 import PName from '../pages/People/Permissions/pname';
@@ -120,6 +121,7 @@ const authProtectedRoutes = [
     { path: '/people/authentication-setup', component: AuthenticationSetup },
     { path: '/people/onboarding-offboarding', component: OnboardingAndOffboarding },
     { path: '/people/policy-training', component: PolicyTraining },
+    { path: '/people/training-group/:slug', component: TrainingGroup },
     { path: '/people/roles', component: Roles },
     { path: '/people/permissions', component: Permissions },
     { path: '/people/permission/:slug', component: PName },
