@@ -40,7 +40,7 @@ const AuditProjects = () => {
                                     <button
                                         className="btn btn-primary"
                                         onClick={() => tog_standard()}>
-                                        <i className="las la-plus mr-sm-2"></i>Create Permission
+                                        <i className="las la-plus mr-sm-2"></i>Create Project
                                     </button>
                                 </CardHeader>
                                 <CardBody>
@@ -148,7 +148,7 @@ const AuditProjects = () => {
                                             />
                                         </FormGroup>
                                     </Col>
-                                    <p className='fw-bold'>Observation Period</p>
+                                    <p className="fw-bold">Observation Period</p>
                                     <Col
                                         sm="12"
                                         className="d-flex align-items-center justify-content-between">
