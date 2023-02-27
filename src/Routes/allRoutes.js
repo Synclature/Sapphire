@@ -39,6 +39,7 @@ import CreateRiskRegister from '../pages/Risk/RiskRegister/create';
 import Controls from '../pages/InfoSecProgram/Controls';
 import EvidenceTask from '../pages/InfoSecProgram/EvidenceTask';
 import Policies from '../pages/InfoSecProgram/Policies';
+import Policy from '../pages/InfoSecProgram/Policies/policy';
 import Procedures from '../pages/InfoSecProgram/Procedures';
 import Products from '../pages/InfoSecProgram/Products';
 
@@ -114,6 +115,7 @@ const authProtectedRoutes = [
     { path: '/infosec-program/controls', component: Controls },
     { path: '/infosec-program/evidence-task', component: EvidenceTask },
     { path: '/infosec-program/policies', component: Policies },
+    { path: '/infosec-program/policy/:id', component: Policy },
     { path: '/infosec-program/procedures', component: Procedures },
     { path: '/infosec-program/products', component: Products },
 
