@@ -512,33 +512,6 @@ const Navdata = () => {
                 updateIconSidebar(e);
             },
         },
-        {
-            id: 'AssuranceTools',
-            label: 'Assurance Tools',
-            icon: <FeatherIcon icon="grid" className="icon-dual" />,
-            link: '/#',
-            click: function (e) {
-                e.preventDefault();
-                setIsAssuranceTools(!isAssuranceTools);
-                setIscurrentState('AssuranceTools');
-                updateIconSidebar(e);
-            },
-            stateVariables: isAssuranceTools,
-            subItems: [
-                {
-                    id: 'portal',
-                    label: 'Portal',
-                    link: '/assurance-tools/portal',
-                    parentId: 'AssuranceTools',
-                },
-                {
-                    id: 'security-assurance-report',
-                    label: 'Security Assurance Report',
-                    link: '/assurance-tools/security-assurance-report',
-                    parentId: 'AssuranceTools',
-                },
-            ],
-        },
     ];
     return <React.Fragment>{menuItems}</React.Fragment>;
 };
