@@ -458,7 +458,6 @@ const Policy = () => {
                                                                     <Select
                                                                         className="basic-single w-100"
                                                                         classNamePrefix="select"
-                                                                        defaultValue={product[0]}
                                                                         isSearchable={true}
                                                                         name="color"
                                                                         options={product}
@@ -474,9 +473,6 @@ const Policy = () => {
                                                                     <Select
                                                                         className="basic-single w-100"
                                                                         classNamePrefix="select"
-                                                                        defaultValue={
-                                                                            evidenceTask[0]
-                                                                        }
                                                                         isSearchable={true}
                                                                         name="color"
                                                                         options={evidenceTask}
