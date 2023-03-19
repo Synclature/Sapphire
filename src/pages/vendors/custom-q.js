@@ -157,11 +157,6 @@ const CustomVendorQuestionnaire = () => {
         [
             {
                 qno: '3.0',
-                qhead: (
-                    <div>
-                        <p>Password Security</p>
-                    </div>
-                ),
                 title: `
                 Are the following technical restrictions placed on passwords?  
 
@@ -213,7 +208,7 @@ const CustomVendorQuestionnaire = () => {
             },
             {
                 qno: '3.10',
-                title: 'Does access to your Application/Portal utilize only one (or more) of the following methods for authenticating Morgan Stanley’s Personnel or other authorized users attempting to access the Services:',
+                title: `Does access to your Application/Portal utilize only one (or more) of the following methods for authenticating Morgan Stanley's Personnel or other authorized users attempting to access the Services:`,
                 qxq: (
                     <div>
                         <ul>
@@ -378,7 +373,7 @@ const CustomVendorQuestionnaire = () => {
             },
             {
                 qno: '4.15',
-                title: `Are all encryption keys used in conjunction with Morgan Stanley’s Confidential Information dedicated to Morgan Stanley (and not used in conjunction with data of any other customer of Supplier).`,
+                title: `Are all encryption keys used in conjunction with Morgan Stanleys Confidential Information dedicated to Morgan Stanley (and not used in conjunction with data of any other customer of Supplier).`,
             },
             {
                 qno: '4.15',

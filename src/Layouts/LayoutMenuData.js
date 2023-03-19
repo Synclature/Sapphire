@@ -499,6 +499,12 @@ const Navdata = () => {
                     link: '/third-party-vendor/questionnaire',
                     parentId: 'Vendors',
                 },
+                {
+                    id: 'customQuestionnaire',
+                    label: 'Custom Questionnaire',
+                    link: '/third-party-vendor/custom-questionnaire',
+                    parentId: 'Vendors',
+                },
             ],
         },
         {
