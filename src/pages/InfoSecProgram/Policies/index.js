@@ -88,7 +88,7 @@ const Policies = () => {
                                     columns={[
                                         {
                                             name: 'Policy Name',
-                                            formatter: row =>
+                                            formatter: (cell, row) =>
                                                 _(
                                                     <a
                                                         href={`/infosec-program/policy/${row.cells[0].data}`}
@@ -100,7 +100,7 @@ const Policies = () => {
                                         'Category',
                                         {
                                             name: 'Assignee',
-                                            formatter: row =>
+                                            formatter: (cell, row) =>
                                                 _(
                                                     <span className="badge bg-primary">
                                                         {row.cells[2].data}
@@ -109,7 +109,7 @@ const Policies = () => {
                                         },
                                         {
                                             name: 'Reviewer',
-                                            formatter: row =>
+                                            formatter: (cell, row) =>
                                                 _(
                                                     <span className="badge bg-info">
                                                         {row.cells[3].data}
@@ -118,7 +118,7 @@ const Policies = () => {
                                         },
                                         {
                                             name: 'status',
-                                            formatter: row =>
+                                            formatter: (cell, row) =>
                                                 _(
                                                     <span className="badge bg-info">
                                                         {row.cells[4].data}
