@@ -53,6 +53,8 @@ import Permissions from '../pages/People/Permissions';
 import PName from '../pages/People/Permissions/pname';
 import Users from '../pages/People/Users';
 import InviteUser from 'pages/People/Users/invite';
+import EmployeeGroup from 'pages/People/OnboardingAndOffboarding/employeeGroup';
+import ApplicationAccess from 'pages/People/OnboardingAndOffboarding/application-access';
 
 //Manage
 import Manage from '../pages/Manage';
@@ -129,6 +131,8 @@ const authProtectedRoutes = [
     { path: '/people/permission/:slug', component: PName },
     { path: '/people/users', component: Users },
     { path: '/people/user/invite', component: InviteUser },
+    { path: '/people/employee-group', component: EmployeeGroup },
+    { path: '/people/application-access', component: ApplicationAccess },
 
     // Vulnerability Management
     { path: '/vulnerability-management', component: VulnerabilityManagement },

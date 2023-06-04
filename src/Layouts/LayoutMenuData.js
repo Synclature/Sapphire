@@ -444,9 +444,15 @@ const Navdata = () => {
                     parentId: 'People',
                 },
                 {
-                    id: 'onboarding-offboarding',
-                    label: 'Onboarding and Offboarding',
-                    link: '/people/onboarding-offboarding',
+                    id: 'employee-group',
+                    label: 'Employee Group',
+                    link: '/people/employee-group',
+                    parentId: 'People',
+                },
+                {
+                    id: 'application-access',
+                    label: 'Application Access',
+                    link: '/people/application-access',
                     parentId: 'People',
                 },
                 {

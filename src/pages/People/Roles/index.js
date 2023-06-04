@@ -26,11 +26,6 @@ const Roles = () => {
                     <BreadCrumb title="Roles" pageTitle="Roles" />
                     <Row>
                         <Card>
-                            <CardHeader className="d-flex align-items-center justify-content-end">
-                                <Link to="/people/role/create" className="btn btn-primary">
-                                    <i className="las la-plus mr-sm-2"></i>Create Role
-                                </Link>
-                            </CardHeader>
                             <CardBody>
                                 <Grid
                                     data={users}
